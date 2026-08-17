@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#07111f">
+    <title>Anitha Dominic | IB Study Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="site-header">
+        <a class="brand" href="#home" aria-label="Anitha Dominic study hub home">
+            <span class="brand-mark">AD</span>
+            <span class="brand-copy"><strong>Anitha Dominic</strong><small>IB Study Hub</small></span>
+        </a>
+        <div class="header-badge"><span></span> Resources ready</div>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="page-title">
+            <div class="eyebrow">Your academic workspace</div>
+            <h1 id="page-title">Study smarter.<br><span>Feel prepared.</span></h1>
+            <p>Everything you need for focused learning—organized by purpose, easy to find, and built to keep you moving.</p>
+            <div class="hero-stats" aria-label="Resource summary">
+                <div><strong>09</strong><span>Resource areas</span></div>
+                <div><strong>02</strong><span>Study themes</span></div>
+                <div><strong>01</strong><span>Simple workspace</span></div>
+            </div>
+        </section>
+
+        <section class="workspace">
+            <nav class="tab-nav" role="tablist" aria-label="Study sections">
+                <button class="tab-button active" id="tab-home" data-target="home" role="tab" aria-controls="home" aria-selected="true">
+                    <span class="tab-icon">⌂</span><span>Overview<small>Start here</small></span>
+                </button>
+                <button class="tab-button" id="tab-themeA" data-target="themeA" role="tab" aria-controls="themeA" aria-selected="false" tabindex="-1">
+                    <span class="tab-icon">A</span><span>Core study<small>Theme A</small></span>
+                </button>
+                <button class="tab-button" id="tab-themeB" data-target="themeB" role="tab" aria-controls="themeB" aria-selected="false" tabindex="-1">
+                    <span class="tab-icon">B</span><span>Exam prep<small>Theme B</small></span>
+                </button>
+            </nav>
+
+            <div class="panels">
+                <section class="content-panel active" id="home" role="tabpanel" aria-labelledby="tab-home">
+                    <div class="panel-heading">
+                        <div><span class="section-label">Overview</span><h2>Welcome back</h2><p>Choose a path or add your own material to the workspace.</p></div>
+                        <span class="panel-number">01</span>
+                    </div>
+
+                    <div class="resource-grid">
+                        <article class="resource-card accent-blue"><div class="card-icon">01</div><div class="card-copy"><span class="card-tag">Learn</span><h3>Study guides</h3><p>Subject summaries and quick notes for everyday learning.</p></div><button class="card-arrow" data-open-tab="themeA" aria-label="Open core study">↗</button></article>
+                        <article class="resource-card accent-violet"><div class="card-icon">02</div><div class="card-copy"><span class="card-tag">Practice</span><h3>Revision support</h3><p>Practice papers, planners, and exam-ready strategies.</p></div><button class="card-arrow" data-open-tab="themeB" aria-label="Open exam preparation">↗</button></article>
+                        <article class="resource-card accent-green"><div class="card-icon">03</div><div class="card-copy"><span class="card-tag">Improve</span><h3>Learning tools</h3><p>Worksheets and recall techniques for better retention.</p></div><span class="card-arrow muted">✓</span></article>
+                    </div>
+
+                    <div class="upload-card">
+                        <div class="upload-visual">↑</div>
+                        <div class="upload-copy"><span class="section-label">Personal workspace</span><h3>Add your study files</h3><p>Upload notes, documents, or worksheets. Your selected files will appear below.</p></div>
+                        <label class="upload-button" for="fileInput">Choose files <span>＋</span></label>
+                        <input id="fileInput" type="file" multiple>
+                    </div>
+                    <div id="uploadList" class="upload-list" aria-live="polite" hidden></div>
+                </section>
+
+                <section class="content-panel" id="themeA" role="tabpanel" aria-labelledby="tab-themeA" hidden>
+                    <div class="panel-heading"><div><span class="section-label blue">Theme A · Learn</span><h2>Core study materials</h2><p>Build strong foundations with neatly grouped subject resources.</p></div><span class="panel-number">02</span></div>
+                    <div class="topic-list">
+                        <article class="topic-card"><div class="topic-index">01</div><div><span>Numbers & logic</span><h3>Mathematics notes</h3><p>Step-by-step explanations and solved examples covering algebra, geometry, and calculus.</p><div class="chips"><span>Algebra</span><span>Geometry</span><span>Calculus</span></div></div><button aria-label="View Mathematics notes">Explore <b>→</b></button></article>
+                        <article class="topic-card"><div class="topic-index">02</div><div><span>Concepts & discovery</span><h3>Science practice</h3><p>Experiments, visual summaries, and essential terminology for confident understanding.</p><div class="chips"><span>Experiments</span><span>Concepts</span><span>Key terms</span></div></div><button aria-label="View Science practice">Explore <b>→</b></button></article>
+                        <article class="topic-card"><div class="topic-index">03</div><div><span>Read & express</span><h3>Language arts</h3><p>Reading guides, structured essay support, and practical grammar exercises.</p><div class="chips"><span>Reading</span><span>Writing</span><span>Grammar</span></div></div><button aria-label="View Language arts">Explore <b>→</b></button></article>
+                    </div>
+                </section>
+
+                <section class="content-panel" id="themeB" role="tabpanel" aria-labelledby="tab-themeB" hidden>
+                    <div class="panel-heading"><div><span class="section-label violet">Theme B · Prepare</span><h2>Exam & revision support</h2><p>Turn preparation into a clear, manageable plan.</p></div><span class="panel-number">03</span></div>
+                    <div class="topic-list">
+                        <article class="topic-card"><div class="topic-index">01</div><div><span>Test your knowledge</span><h3>Past papers</h3><p>Sample questions and model answers to help you understand exam patterns.</p><div class="chips"><span>Questions</span><span>Answers</span><span>Practice</span></div></div><button aria-label="View Past papers">Explore <b>→</b></button></article>
+                        <article class="topic-card"><div class="topic-index">02</div><div><span>Plan with purpose</span><h3>Revision planner</h3><p>Simple study schedules that break exam preparation into realistic sessions.</p><div class="chips"><span>Schedule</span><span>Goals</span><span>Progress</span></div></div><button aria-label="View Revision planner">Explore <b>→</b></button></article>
+                        <article class="topic-card"><div class="topic-index">03</div><div><span>Perform at your best</span><h3>Study tips</h3><p>Memory methods, learning habits, and calm strategies for exam day.</p><div class="chips"><span>Memory</span><span>Focus</span><span>Wellbeing</span></div></div><button aria-label="View Study tips">Explore <b>→</b></button></article>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer><span>ANITHA DOMINIC</span><p>Designed for focused learning · 2026</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>
