@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const tabs = [...document.querySelectorAll('.tab-button')];
     const panels = [...document.querySelectorAll('.content-panel')];
-    const fileInput = document.getElementById('fileInput');
-    const uploadList = document.getElementById('uploadList');
+    const fileInputs = [...document.querySelectorAll('input[type="file"][data-upload-list]')];
 
     function activateTab(target, moveFocus = false) {
         tabs.forEach(tab => {
@@ -44,7 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
         activateTab(location.hash.slice(1));
     }
 
-    fileInput.addEventListener('change', () => {
+    fileInputs.forEach(fileInput => fileInput.addEventListener('change', () => {
+        const uploadList = document.getElementById(fileInput.dataset.uploadList);
         uploadList.replaceChildren();
         const files = [...fileInput.files];
         uploadList.hidden = files.length === 0;
@@ -59,5 +59,5 @@ document.addEventListener('DOMContentLoaded', () => {
             row.append(name, size);
             uploadList.appendChild(row);
         });
-    });
+    }));
 });

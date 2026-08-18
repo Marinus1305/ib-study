@@ -45,7 +45,7 @@
     <main>
         <section class="hero" aria-labelledby="page-title">
             <div class="eyebrow">Your academic workspace</div>
-            <h1 id="page-title">Study smarter.<br><span>Feel prepared.</span></h1>
+            <h1 id="page-title">ANITHA B DOMINIC<br><span>STUDY MATERIALS</span></h1>
             <p>Everything you need for focused learning—organized by purpose, easy to find, and built to keep you moving.</p>
             <div class="hero-stats" aria-label="Resource summary">
                 <div><strong>09</strong><span>Resource areas</span></div>
@@ -84,27 +84,29 @@
                         <div class="upload-visual">↑</div>
                         <div class="upload-copy"><span class="section-label">Personal workspace</span><h3>Add your study files</h3><p>Upload notes, documents, or worksheets. Your selected files will appear below.</p></div>
                         <label class="upload-button" for="fileInput">Choose files <span>＋</span></label>
-                        <input id="fileInput" type="file" multiple>
+                        <input id="fileInput" type="file" multiple data-upload-list="uploadList">
                     </div>
                     <div id="uploadList" class="upload-list" aria-live="polite" hidden></div>
                 </section>
 
                 <section class="content-panel" id="themeA" role="tabpanel" aria-labelledby="tab-themeA" hidden>
-                    <div class="panel-heading"><div><span class="section-label blue">Theme A · Learn</span><h2>Core study materials</h2><p>Build strong foundations with neatly grouped subject resources.</p></div><span class="panel-number">02</span></div>
-                    <div class="topic-list">
-                        <article class="topic-card"><div class="topic-index">01</div><div><span>Numbers & logic</span><h3>Mathematics notes</h3><p>Step-by-step explanations and solved examples covering algebra, geometry, and calculus.</p><div class="chips"><span>Algebra</span><span>Geometry</span><span>Calculus</span></div></div><button aria-label="View Mathematics notes">Explore <b>→</b></button></article>
-                        <article class="topic-card"><div class="topic-index">02</div><div><span>Concepts & discovery</span><h3>Science practice</h3><p>Experiments, visual summaries, and essential terminology for confident understanding.</p><div class="chips"><span>Experiments</span><span>Concepts</span><span>Key terms</span></div></div><button aria-label="View Science practice">Explore <b>→</b></button></article>
-                        <article class="topic-card"><div class="topic-index">03</div><div><span>Read & express</span><h3>Language arts</h3><p>Reading guides, structured essay support, and practical grammar exercises.</p><div class="chips"><span>Reading</span><span>Writing</span><span>Grammar</span></div></div><button aria-label="View Language arts">Explore <b>→</b></button></article>
+                    <div class="upload-card theme-upload">
+                        <div class="upload-visual">↑</div>
+                        <div class="upload-copy"><h3>Upload Theme A files</h3></div>
+                        <label class="upload-button" for="themeAFileInput">Choose files <span>＋</span></label>
+                        <input id="themeAFileInput" type="file" multiple data-upload-list="themeAUploadList">
                     </div>
+                    <div id="themeAUploadList" class="upload-list" aria-live="polite" hidden></div>
                 </section>
 
                 <section class="content-panel" id="themeB" role="tabpanel" aria-labelledby="tab-themeB" hidden>
-                    <div class="panel-heading"><div><span class="section-label violet">Theme B · Prepare</span><h2>Exam & revision support</h2><p>Turn preparation into a clear, manageable plan.</p></div><span class="panel-number">03</span></div>
-                    <div class="topic-list">
-                        <article class="topic-card"><div class="topic-index">01</div><div><span>Test your knowledge</span><h3>Past papers</h3><p>Sample questions and model answers to help you understand exam patterns.</p><div class="chips"><span>Questions</span><span>Answers</span><span>Practice</span></div></div><button aria-label="View Past papers">Explore <b>→</b></button></article>
-                        <article class="topic-card"><div class="topic-index">02</div><div><span>Plan with purpose</span><h3>Revision planner</h3><p>Simple study schedules that break exam preparation into realistic sessions.</p><div class="chips"><span>Schedule</span><span>Goals</span><span>Progress</span></div></div><button aria-label="View Revision planner">Explore <b>→</b></button></article>
-                        <article class="topic-card"><div class="topic-index">03</div><div><span>Perform at your best</span><h3>Study tips</h3><p>Memory methods, learning habits, and calm strategies for exam day.</p><div class="chips"><span>Memory</span><span>Focus</span><span>Wellbeing</span></div></div><button aria-label="View Study tips">Explore <b>→</b></button></article>
+                    <div class="upload-card theme-upload">
+                        <div class="upload-visual">↑</div>
+                        <div class="upload-copy"><h3>Upload Theme B files</h3></div>
+                        <label class="upload-button" for="themeBFileInput">Choose files <span>＋</span></label>
+                        <input id="themeBFileInput" type="file" multiple data-upload-list="themeBUploadList">
                     </div>
+                    <div id="themeBUploadList" class="upload-list" aria-live="polite" hidden></div>
                 </section>
             </div>
         </section>
